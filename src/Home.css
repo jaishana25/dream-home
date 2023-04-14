@@ -1,59 +1,142 @@
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
 
 .home-container {
-    background: linear-gradient(to bottom, #f6e7e6, #c6d8d6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-    font-family: sans-serif;
-    padding: 0 2rem;
-  }
-  
-  .home-container h1 {
-    
-    font-size: 4rem;
-    font-weight: 900;
-    margin-bottom: 2rem;
-  }
-  
-  .home-container p {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .buttons-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn-staff,
-  .btn-property {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-    margin-right: 2rem;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .btn-staff {
-    background-color: #69bbba;
-  }
-  .btn-staff:hover {
-    background-color: #01acaa;
-  }
-  
-  .btn-property {
-    background-color: #e87722;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  color:white;
+  padding: 0 2rem;
+  position: relative;
+}
+.home-container::before {
+  content: "Contact Us";
+  color:black;
+ 
+  position: absolute;
+  top:0.5rem;
+  right: 1.6rem;
+  width: 180px;
+  height: 40px;
+  background-color: rgba(182, 150, 209, 0.547);
+  border-radius: 20px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease-out;
+}
+
+.home-container::before:hover {
+  background-color: rgba(154, 110, 190, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+
+}
+
+.background-image-container {
+  position: absolute;
+  top: 20;
+  left: 30;
+  width: 80%;
+  height: 80%;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/home2.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  border-radius: 20px; /* Adjust the value to your desired amount of rounding */
+}
+
+
+.home-container h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.home-container p {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 20%;
+  border-radius: 20px;
+}
+
+.btn-staff,
+.btn-property {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #69bbba;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.btn-staff:hover,
+.btn-property:hover {
+  background-color: #01acaa;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: top;
+  height: 40vh;
+  font-family: 'Kanit', sans-serif;
+  color:rgb(202, 173, 209);
+  padding: 0 2rem;
+  position: absolute;
+}
+
+.text2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+ 
+  height: 6rem;
+  font-family: 'Kanit', sans-serif;
+  color:#acdfd3;
+  padding: 0 4rem;
+  font-size: 0.5rem;
+  position: relative;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+
+}
+.text3-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: top;
+  height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  color:rgb(255, 255, 255);
+  padding: 0 2rem;
+  position: relative;
+}
